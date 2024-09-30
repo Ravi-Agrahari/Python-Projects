@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Update
+{% endblock title %}
+
+{% block body_content %}
+  
+<!-- form code  -->
+<div class="container my-5 border border-1 p-3 rounded-4" style="background-color: #9ab6b26e;">
+  <h3 class="my-3">Update your Tasks</h3>
+  <form action="/update/{{todo.sno}}" method="POST">
+    <div class="mb-3">
+      <label for="title" class="form-label"><b>Tasks Title</b></label>
+      <input type="text" class="form-control" name="title" id="title" value="{{todo.title}}">
+
+    </div>
+    <div class="mb-3">
+      <label for="desc" class="form-label"><b>Description</b></label>
+      <input type="text" class="form-control" name="desc" id="desc" value="{{todo.desc}}">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+</div>
+
+{% endblock body_content %}
+
+
+
